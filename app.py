@@ -3,7 +3,8 @@ import json
 pokedex = open("./pokedex.json", encoding="utf8")
 ## create variable "data" that represents the enitre pokedex list
 data = json.load(pokedex)
-print(data[0])
+for index, item in enumerate(pokedex):
+    print(index, ":", item["name"])
 
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.
 
@@ -14,4 +15,5 @@ print(data[0])
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
+
 
