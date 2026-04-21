@@ -16,20 +16,24 @@ print (language)
 y = input ("What language would you like to search in?")
 for letter in y:
     if letter == "l":
-        print (data['name']['english'])
+        for pokemon in data:
+            print (pokemon['name']['english'])
         English = True
     if letter == "J":
-        print (data['name']['japanese'])
+        for pokemon in data:
+            print (pokemon['name']['japanese'])
         Japanese = True
     if letter == "C":
-        print (data['name']['chinese'])
+        for pokemon in data:
+            print (pokemon['name']['chinese'])
         Chinese = True
     if letter == "F":
-        print (data['name']['french'])
+        for pokemon in data:
+            print (pokemon['name']['french'])
         French = True
 x = input("What pokemon would you like to find?")
-for pokedex_character in data:
-    print (pokedex_character['name']['English'])
+a = []
 for character in x:
-    if character == pokedex_character:
-        print (x)  
+    for pokemon in data:
+        for pokedex_character in pokemon['name']['english']:
+            if character == pokedex_character:
