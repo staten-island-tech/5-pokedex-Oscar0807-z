@@ -33,7 +33,8 @@ for letter in y:
         French = True
 x = input("What pokemon would you like to find?")
 a = []
-for character in x:
-    for pokemon in data:
-        for pokedex_character in pokemon['name']['english']:
-            if character == pokedex_character:
+for pokedex_character in pokemon:
+    for character in x:
+
+while character == pokedex_character:
+        
