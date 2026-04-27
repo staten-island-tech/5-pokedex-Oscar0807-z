@@ -32,8 +32,8 @@ for letter in y:
             print (pokemon['name']['french'])
         French = True
 
-x = input("What pokemon would you like to find?")
+x = input("What pokemon would you like to find?").lower()
 
 for pokemon in data:
-    if x == pokemon['name']['english']:
+    if x == pokemon['name']['english'].lower():
         print (pokemon['name']['english'])
