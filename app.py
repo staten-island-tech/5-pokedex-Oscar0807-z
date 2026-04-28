@@ -12,7 +12,12 @@ print (language) """
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
+z = input("What type would you like to search").capitalize()
 
+for pokemon in data:
+    for type in pokemon['type']:
+        if z == type:
+            print (pokemon)
 """ y = input ("What language would you like to search in?") """
 """ for letter in y:
     if letter == "l":
@@ -31,13 +36,15 @@ print (language) """
         for pokemon in data:
             print (pokemon['name']['french'])
         French = True """
-y = ("What type would you like to search").lower()
-for pokemon in data:
-    for type in pokemon['type']:
-        if y == type:
-            print (pokemon)
+
 """ x = input("What pokemon would you like to find?").lower()
 
 for pokemon in data:
     if x == pokemon['name']['english'].lower():
         print (pokemon['name']['english']) """
+
+x = input("search").capitalize()
+for pokemon in data:
+    if x in pokemon['name']['english']:
+        print (pokemon)
+        
